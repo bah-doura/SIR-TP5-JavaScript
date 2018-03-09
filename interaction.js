@@ -14,19 +14,19 @@ function DnD(canvas, interactor) {
     this.mousedown = function(evt) {
         this.Xstr = getMousePosition(canvas, evt).x;
         this.Ystr  = getMousePosition(canvas, evt).y;
-        console.log(evt);
+        console.log("Mouse down : X = " + this.Xstr + " Y = " + this.Ystr);
     }.bind(this) ;
 
     this.mousemove = function(evt) {
         this.Xstr = getMousePosition(canvas, evt).x;
         this.Ystr  = getMousePosition(canvas, evt).y;
-        console.log(evt);
+        console.log("Mouse move : X = " + this.Xstr + "  Y = " + this.Ystr);
     }.bind(this) ;
 
     this.mouseup = function(evt) {
         this.Xstr = getMousePosition(canvas, evt).x;
         this.Ystr  = getMousePosition(canvas, evt).y;
-        console.log(evt);
+        console.log("Mouse up : X = " + this.Xstr + " Y = " + this.Ystr);
     }.bind(this) ;
 
 	// Associer les fonctions précédentes aux évènements du canvas.
