@@ -11,6 +11,26 @@ function DnD(canvas, interactor) {
     this.Yend = 0;
 
 	// Developper les 3 fonctions gérant les événements
+    this.mousedown = function(evt) {
+        this.Xstr = evt.x;
+        this.Ystr  = evt.y;
+        console.log(evt);
+    }.bind(this) ;
+    canvas.addEventListener('mousedown',this.mousedown)
+
+    this.mousemove = function(evt) {
+        this.Xstr = evt.x;
+        this.Ystr  = evt.y;
+        console.log(evt);
+    }.bind(this) ;
+
+    canvas.addEventListener('mousemove',this.mousemove)
+    this.mouseup = function(evt) {
+        this.Xstr = evt.x;
+        this.Ystr  = evt.y;
+        console.log(evt);
+    }.bind(this) ;
+    canvas.addEventListener('mouseup',this.mousemove)
 
 	// Associer les fonctions précédentes aux évènements du canvas.
 };
